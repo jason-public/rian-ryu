@@ -1,0 +1,8 @@
+{
+  "name": "유종형 공공행정 포트폴리오",
+  "description": "남양주시청에 근무하는 유종형 팀장의 포트폴리오입니다.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
