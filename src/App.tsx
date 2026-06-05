@@ -25,7 +25,7 @@ export default function App() {
           <div className="absolute inset-0 pointer-events-none select-none">
             {/* 1. Base Image - Replace src with your uploaded image */}
             <img 
-              src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2000&auto=format&fit=crop" 
+              src="/profile.jpg" 
               alt="Profile Background" 
               className="absolute right-0 top-0 w-[90%] md:w-[60%] h-full object-cover object-top opacity-50 grayscale mix-blend-multiply"
             />
