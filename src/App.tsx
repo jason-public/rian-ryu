@@ -15,7 +15,7 @@ export default function App() {
            <a href="#experience" className="hover:line-through">Experience</a>
            <a href="#awards" className="hover:line-through">Awards</a>
         </div>
-        <div>2025—2026</div>
+        <div>2026</div>
       </header>
 
       <main className="pt-16">
@@ -25,7 +25,7 @@ export default function App() {
           <div className="absolute inset-0 pointer-events-none select-none">
             {/* 1. Base Image - Replace src with your uploaded image */}
             <img 
-              src="/profile.jpg" 
+              src="/me.webp" 
               alt="Profile Background" 
               className="absolute right-0 top-0 w-[90%] md:w-[60%] h-full object-cover object-top opacity-50 grayscale mix-blend-multiply"
             />
@@ -76,7 +76,7 @@ export default function App() {
             <div className="md:col-span-3 p-6 md:p-12 border-b md:border-b-0 md:border-r border-[#141414] flex flex-col justify-between items-start">
               <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-[#141414] rounded-full mb-12 md:mb-0 text-center inline-block">01</span>
               <div>
-                 <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-4 break-keep">지제체 최초 개발 프로젝트</h2>
+                 <h2 className="text-3xl md:text-4xl font-bold tracking-tighter leading-tight mb-4 break-keep">지자체 최초 추진 프로젝트</h2>
                  <p className="text-xs opacity-60 max-w-[150px]">남양주시 발전을 이끈 최초 프로젝트</p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export default function App() {
           {/* Experience */}
           <div id="experience" className="border-r border-b lg:border-b-0 border-[#141414]">
             <div className="p-6 md:p-10 border-b border-[#141414] flex justify-between items-center bg-[#141414] text-[#EEEFEA]">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">Experience</h2>
+              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">EXPERIENCE<br />(주요 경력)</h2>
               <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-[#EEEFEA] rounded-full">02</span>
             </div>
             <div className="p-6 md:p-12 space-y-16">
@@ -145,7 +145,7 @@ export default function App() {
           {/* Awards & Media */}
           <div>
             <div id="awards" className="p-6 md:p-10 border-b border-[#141414] flex justify-between items-center bg-[#141414] text-[#EEEFEA]">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">Recognition & Press</h2>
+              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">AWARD & PRESS<br />(수상 내역 및 언론 보도)</h2>
               <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-[#EEEFEA] rounded-full">03</span>
             </div>
             
@@ -191,7 +191,16 @@ export default function App() {
                    <div key={idx} className="flex gap-6 items-baseline">
                      <div className="text-xs font-mono opacity-50 w-16 shrink-0">{ai.date}</div>
                      <div>
-                       <h4 className="font-bold text-sm md:text-base">{ai.title}</h4>
+                       {ai.url ? (
+                         <a href={ai.url} target="_blank" rel="noopener noreferrer" className="group inline-block">
+                           <h4 className="font-bold text-sm md:text-base group-hover:underline underline-offset-4 flex items-center gap-2 decoration-2 decoration-[#141414]/20">
+                             {ai.title}
+                             <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                           </h4>
+                         </a>
+                       ) : (
+                         <h4 className="font-bold text-sm md:text-base">{ai.title}</h4>
+                       )}
                        <p className="text-sm opacity-70 mt-3 leading-relaxed break-keep font-light">{ai.description}</p>
                      </div>
                    </div>
@@ -223,7 +232,7 @@ export default function App() {
               &copy; {new Date().getFullYear()} YOO JONG HYUNG.
             </div>
             <div className="flex gap-6 text-[10px] uppercase font-bold tracking-widest opacity-60">
-              <span>유종형의 공공행정 포트폴리오</span>
+              <span>공공행정 포트폴리오</span>
             </div>
           </div>
         </footer>

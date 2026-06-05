@@ -17,13 +17,13 @@ export const highlights = [
   {
     title: "민간협력 화물주차장 개발",
     badge: "전국 최초",
-    description: "남양주시청 자동차관리과 화물팀 업무 총괄 및 민간협력 화물주차장 기획·개발",
+    description: "남양주시청 자동차관리과 화물팀 업무 총괄 및 민간협력 화물주차장 추진",
     icon: Truck,
     date: "2025.01",
     url: "https://www.youtube.com/watch?v=S1r8_NQsFVE"
   },
   {
-    title: "주소정보시스템 개발",
+    title: "스마트 주소정보 시스템 개발",
     badge: "전국 최초",
     description: "부동산관리과 도로명주소팀장으로서 도로명주소 업무 총괄 및 주소정보시스템 혁신",
     icon: Map,
@@ -42,39 +42,11 @@ export const highlights = [
 
 export const experience = [
   {
-    period: "2025.01.01 - 현재",
-    organization: "남양주시청 자동차관리과",
-    role: "화물팀장",
-    details: ["화물팀 업무 총괄", "전국 최초 민간협력 화물주차장 개발"],
-    icon: Truck,
-  },
-  {
-    period: "2022.03.14 - 2024.12.31",
-    organization: "남양주시청 부동산관리과",
-    role: "도로명주소팀장",
-    details: ["도로명주소 업무 총괄", "전국 최초 주소정보시스템 개발"],
-    icon: Map,
-  },
-  {
-    period: "2020.10.26 - 2022.03.13",
-    organization: "남양주시청 노인복지과",
-    role: "장묘문화팀장",
-    details: ["장묘업무 총괄", "전국 최초 드론 기반 불법 묘지 감시 시스템 개발"],
-    icon: Server,
-  },
-  {
-    period: "2019.05.07 - 2020.10.25",
-    organization: "남양주시청 도서관정책과",
-    role: "도서관지원팀장",
-    details: ["정약용 도서관 등 건립 총괄"],
-    icon: Building2,
-  },
-  {
-    period: "2018.01.02 - 2019.05.06",
-    organization: "오남읍",
-    role: "지역안전팀장 (행정6급)",
-    details: ["지역안전팀 업무 총괄"],
-    icon: Briefcase,
+    period: "2006.10.20",
+    organization: "남양주시청",
+    role: "행정7급",
+    details: ["공채시험(행정7급) 합격"],
+    icon: Award,
   },
   {
     period: "2006.11.16 - 2017.12.31",
@@ -84,34 +56,47 @@ export const experience = [
     icon: Briefcase,
   },
   {
-    period: "2006.10.20",
-    organization: "남양주시청",
-    role: "행정7급",
-    details: ["공채시험(행정7급) 합격"],
-    icon: Award,
+    period: "2018.01.02 - 2019.05.06",
+    organization: "오남읍",
+    role: "지역안전팀장 (행정6급)",
+    details: ["지역안전팀 업무 총괄"],
+    icon: Briefcase,
+  },
+  {
+    period: "2019.05.07 - 2020.10.25",
+    organization: "남양주시청 도서관정책과",
+    role: "도서관지원팀장",
+    details: ["정약용 도서관 등 건립 총괄"],
+    icon: Building2,
+  },
+  {
+    period: "2020.10.26 - 2022.03.13",
+    organization: "남양주시청 노인복지과",
+    role: "장묘문화팀장",
+    details: ["장묘업무 총괄", "전국 최초 드론 기반 불법 묘지 감시 시스템 개발"],
+    icon: Server,
+  },
+  {
+    period: "2022.03.14 - 2024.12.31",
+    organization: "남양주시청 부동산관리과",
+    role: "도로명주소팀장",
+    details: ["도로명주소 업무 총괄", "전국 최초 주소정보시스템 개발"],
+    icon: Map,
+  },
+  {
+    period: "2025.01.01 - 현재",
+    organization: "남양주시청 자동차관리과",
+    role: "화물팀장",
+    details: ["화물팀 업무 총괄", "전국 최초 민간협력 화물주차장 개발"],
+    icon: Truck,
   },
 ];
 
 export const awards = [
   {
-    date: "2024.12.23",
-    title: "남양주시 적극행정 경진대회 (우수상)",
-    organization: "남양주시 주관",
-  },
-  {
-    date: "2024.08.28",
-    title: "경기도 적극행정 경진대회 (장려상)",
-    organization: "경기도 주관",
-  },
-  {
-    date: "2021.11.30",
-    title: "장사문화 발전 유공",
-    organization: "보건복지부장관",
-  },
-  {
-    date: "2016.03.31",
-    title: "자랑스러운 공무원",
-    organization: "경기도지사",
+    date: "2010.09.01",
+    title: "정보화능력 경진대회 (최우수)",
+    organization: "남양주시장",
   },
   {
     date: "2010.12.31",
@@ -119,9 +104,24 @@ export const awards = [
     organization: "남양주시장",
   },
   {
-    date: "2010.09.01",
-    title: "정보화능력 경진대회 (최우수)",
-    organization: "남양주시장",
+    date: "2016.03.31",
+    title: "자랑스러운 공무원",
+    organization: "경기도지사",
+  },
+  {
+    date: "2021.11.30",
+    title: "장사문화 발전 유공",
+    organization: "보건복지부장관",
+  },
+  {
+    date: "2024.08.28",
+    title: "경기도 적극행정 경진대회 (장려상) [전국 최초 스마트 주소정보 시스템 개발]",
+    organization: "경기도 주관",
+  },
+  {
+    date: "2024.12.23",
+    title: "남양주시 적극행정 경진대회 (우수상)",
+    organization: "남양주시 주관",
   },
 ];
 
@@ -168,12 +168,14 @@ export const aiActivities = [
   {
     date: "2025.02",
     title: "남양주시 '스마트 행정혁신 연구동아리' 회장 역임",
-    description: "AI를 활용한 스마트 행정혁신 사례 발굴 및 개발"
+    description: "AI를 활용한 스마트 행정혁신 사례 발굴 및 개발",
+    url: "/study_group_report.pdf"
   },
   {
     date: "2026.05",
     title: "남양주시 월례조회 직원 및 시민 대상 발표",
-    description: "발표 내용 : AI가 여는 스마트 행정의 새로운 패러다임"
+    description: "발표 내용 : AI가 여는 스마트 행정의 새로운 패러다임",
+    url: ""
   }
 ];
 
