@@ -59,7 +59,7 @@ export default function App() {
             <img 
               src="/me.webp" 
               alt="Profile Background" 
-              className={`absolute right-0 top-0 w-[90%] md:w-[60%] h-full object-cover object-top grayscale scale-[0.7] origin-top-right transition-all duration-500 ${theme === 'blue' ? 'mix-blend-luminosity opacity-40' : 'mix-blend-multiply opacity-50'}`}
+              className={`absolute right-0 top-0 w-[90%] md:w-[60%] h-full object-cover object-top grayscale scale-[0.5] origin-top-right transition-all duration-500 ${theme === 'blue' ? 'mix-blend-luminosity opacity-40' : 'mix-blend-multiply opacity-50'}`}
             />
             
             {/* 2. Gradient Masks for smooth blending */}
@@ -151,13 +151,15 @@ export default function App() {
         <section className="grid lg:grid-cols-2">
           {/* Experience */}
           <div id="experience" className="border-r border-b lg:border-b-0 border-app-text">
-            <div className="p-6 md:p-10 border-b border-app-text flex justify-between items-center bg-app-text text-app-bg">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">EXPERIENCE<br />(주요 경력)</h2>
-              <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-app-bg rounded-full">02</span>
-            </div>
+            <FadeUp>
+              <div className="p-6 md:p-10 border-b border-app-text flex justify-between items-center bg-app-text text-app-bg">
+                <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">EXPERIENCE<br />(주요 경력)</h2>
+                <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-app-bg rounded-full">02</span>
+              </div>
+            </FadeUp>
             <div className="p-6 md:p-12 space-y-16">
                {experience.map((exp, idx) => (
-                 <div key={idx} className="relative pl-8 border-l border-app-text">
+                 <FadeUp key={idx} delay={idx * 0.1} className="relative pl-8 border-l border-app-text">
                    <div className="absolute w-2 h-2 bg-app-text -left-[4.5px] top-2 rounded-full" />
                    <div className="flex flex-col mb-4">
                      <h4 className="text-xl md:text-2xl font-bold">{exp.role}</h4>
@@ -174,64 +176,78 @@ export default function App() {
                        </li>
                      ))}
                    </ul>
-                 </div>
+                 </FadeUp>
                ))}
             </div>
           </div>
 
           {/* Awards & Media */}
           <div>
-            <div id="awards" className="p-6 md:p-10 border-b border-app-text flex justify-between items-center bg-app-text text-app-bg">
-              <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">AWARD & PRESS<br />(수상 내역 및 언론 보도)</h2>
-              <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-app-bg rounded-full">03</span>
-            </div>
+            <FadeUp>
+              <div id="awards" className="p-6 md:p-10 border-b border-app-text flex justify-between items-center bg-app-text text-app-bg">
+                <h2 className="text-2xl md:text-3xl font-bold uppercase tracking-tighter">AWARD & PRESS<br />(수상 내역 및 언론 보도)</h2>
+                <span className="text-xs font-bold uppercase tracking-widest px-2 py-1 border border-app-bg rounded-full">03</span>
+              </div>
+            </FadeUp>
             
             <div className="p-6 md:p-12 border-b border-app-text">
-              <h3 className="text-xs font-bold uppercase tracking-widest mb-10 opacity-50 border-b border-app-text/20 pb-4">Awards</h3>
+              <FadeUp>
+                <h3 className="text-xs font-bold uppercase tracking-widest mb-10 opacity-50 border-b border-app-text/20 pb-4">Awards</h3>
+              </FadeUp>
               <div className="space-y-8">
                  {awards.map((award, idx) => (
-                   <div key={idx} className="flex gap-6 items-baseline">
-                     <div className="text-xs font-mono opacity-50 w-20 shrink-0">{award.date}</div>
-                     <div>
-                       <h4 className="font-bold text-sm md:text-base">{award.title}</h4>
-                       <p className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-2">{award.organization}</p>
-                     </div>
-                   </div>
-                 ))}
-              </div>
-            </div>
-
-            <div className="p-6 md:p-12 border-b border-app-text bg-app-card">
-              <h3 className="text-xs font-bold uppercase tracking-widest mb-10 opacity-50 border-b border-app-text/20 pb-4">Media Coverage</h3>
-              <div className="space-y-8">
-                 {mediaCoverage.map((media, idx) => (
-                   <a key={idx} href={media.url} target="_blank" rel="noopener noreferrer" className="group block">
+                   <FadeUp key={idx} delay={idx * 0.05}>
                      <div className="flex gap-6 items-baseline">
-                       <div className="text-xs font-mono opacity-50 w-12 shrink-0">{media.year}</div>
+                       <div className="text-xs font-mono opacity-50 w-20 shrink-0">{award.date}</div>
                        <div>
-                         <h4 className="font-bold text-sm md:text-base group-hover:underline underline-offset-4 flex items-center gap-2 decoration-2 decoration-app-text/20">
-                           {media.title}
-                           <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                         </h4>
-                         <p className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-2">{media.publisher}</p>
+                         <h4 className="font-bold text-sm md:text-base">{award.title}</h4>
+                         <p className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-2">{award.organization}</p>
                        </div>
                      </div>
-                   </a>
+                   </FadeUp>
                  ))}
               </div>
             </div>
 
-            <div className="p-6 md:p-12 bg-app-card">
-              <h3 className="text-xs font-bold uppercase tracking-widest mb-10 opacity-50 border-b border-app-text/20 pb-4">AI Expertise</h3>
+            <div className="p-6 md:p-12 border-b border-app-text bg-app-card transition-colors duration-500">
+              <FadeUp>
+                <h3 className="text-xs font-bold uppercase tracking-widest mb-10 opacity-50 border-b border-app-text/20 pb-4">Media Coverage</h3>
+              </FadeUp>
+              <div className="space-y-8">
+                 {mediaCoverage.map((media, idx) => (
+                   <FadeUp key={idx} delay={idx * 0.05}>
+                     <a href={media.url} target="_blank" rel="noopener noreferrer" className="group block">
+                       <div className="flex gap-6 items-baseline">
+                         <div className="text-xs font-mono opacity-50 w-12 shrink-0">{media.year}</div>
+                         <div>
+                           <h4 className="font-bold text-sm md:text-base group-hover:underline underline-offset-4 flex items-center gap-2 decoration-2 decoration-app-text/20">
+                             {media.title}
+                             <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                           </h4>
+                           <p className="text-[10px] font-bold uppercase tracking-widest opacity-50 mt-2">{media.publisher}</p>
+                         </div>
+                       </div>
+                     </a>
+                   </FadeUp>
+                 ))}
+              </div>
+            </div>
+
+            <div className="p-6 md:p-12 bg-app-card transition-colors duration-500">
+              <FadeUp>
+                <h3 className="text-xs font-bold uppercase tracking-widest mb-10 opacity-50 border-b border-app-text/20 pb-4">AI Expertise</h3>
+              </FadeUp>
               <div className="space-y-8">
                  {aiActivities.map((ai, idx) => (
-                   <div key={idx} className="flex gap-6 items-baseline">
-                     <div className="text-xs font-mono opacity-50 w-16 shrink-0">{ai.date}</div>
-                     <div>
-                       <h4 className="font-bold text-sm md:text-base">{ai.title}</h4>
-                       <p className="text-sm opacity-70 mt-3 leading-relaxed break-keep font-light">{ai.description}</p>
+                   <FadeUp key={idx} delay={idx * 0.05}>
+                     <div className="flex gap-6 items-baseline">
+                       <div className="text-xs font-mono opacity-50 w-16 shrink-0">{ai.date}</div>
+                       <div>
+                         <h4 className="font-bold text-sm md:text-base">{ai.title}</h4>
+                         <p className="text-sm opacity-70 mt-3 leading-relaxed break-keep font-light">{ai.description}</p>
+                       </div>
                      </div>
-                   </div>
+                   </FadeUp>
                  ))}
               </div>
             </div>
@@ -240,29 +256,35 @@ export default function App() {
         </section>
 
         {/* FOOTER */}
-        <footer id="about" className="p-6 md:p-12 bg-app-text text-app-bg flex flex-col justify-center text-center min-h-[50vh] border-t border-app-text relative overflow-hidden">
+        <footer id="about" className="p-6 md:p-12 bg-app-text text-app-bg flex flex-col justify-center text-center min-h-[50vh] border-t border-app-text relative overflow-hidden transition-colors duration-500">
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80vw] h-[80vw] md:w-[40vw] md:h-[40vw] border border-white/5 rounded-full flex items-center justify-center opacity-20 pointer-events-none">
             <div className="w-[60%] h-[60%] border border-white/5 rounded-full" />
           </div>
           
-          <h2 className="text-[10vw] md:text-[8vw] font-bold uppercase tracking-tighter leading-[0.85] mb-12 relative z-10 hover:italic transition-all duration-500">
-            Let's Make<br/>History
-          </h2>
+          <FadeUp>
+            <h2 className="text-[10vw] md:text-[8vw] font-bold uppercase tracking-tighter leading-[0.85] mb-12 relative z-10 hover:italic transition-all duration-500">
+              Let's Make<br/>History
+            </h2>
+          </FadeUp>
           
-          <div className="w-12 h-px bg-app-card/20 mx-auto mb-10 relative z-10" />
+          <FadeUp delay={0.2}>
+            <div className="w-12 h-px bg-app-bg/20 mx-auto mb-10 relative z-10" />
+            
+            <p className="text-sm opacity-60 max-w-sm mx-auto mb-16 leading-relaxed relative z-10 break-keep">
+              끊임없는 혁신과 헌신으로 공공행정의 새로운 표준을 만들어갑니다.
+            </p>
+          </FadeUp>
           
-          <p className="text-sm opacity-60 max-w-sm mx-auto mb-16 leading-relaxed relative z-10 break-keep">
-            끊임없는 혁신과 헌신으로 공공행정의 새로운 표준을 만들어갑니다.
-          </p>
-          
-          <div className="flex flex-col md:flex-row items-center justify-between mt-auto pt-10 border-t border-white/10 w-full relative z-10">
-            <div className="text-[10px] font-mono opacity-40 uppercase tracking-widest mb-4 md:mb-0">
-              &copy; {new Date().getFullYear()} YOO JONG HYUNG.
+          <FadeUp delay={0.4} className="mt-auto relative z-10 w-full">
+            <div className="flex flex-col md:flex-row items-center justify-between pt-10 border-t border-white/10 w-full">
+              <div className="text-[10px] font-mono opacity-40 uppercase tracking-widest mb-4 md:mb-0">
+                &copy; {new Date().getFullYear()} YOO JONG HYUNG.
+              </div>
+              <div className="flex gap-6 text-[10px] uppercase font-bold tracking-widest opacity-60">
+                <span>공공행정 포트폴리오</span>
+              </div>
             </div>
-            <div className="flex gap-6 text-[10px] uppercase font-bold tracking-widest opacity-60">
-              <span>공공행정 포트폴리오</span>
-            </div>
-          </div>
+          </FadeUp>
         </footer>
 
       </main>
