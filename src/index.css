@@ -2,12 +2,27 @@
 @import "tailwindcss";
 
 @theme {
+  --color-app-bg: var(--theme-bg);
+  --color-app-text: var(--theme-text);
+  --color-app-card: var(--theme-card);
   --font-sans: "Space Grotesk", "Noto Sans KR", ui-sans-serif, system-ui, sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+:root {
+  --theme-bg: #1B2961;
+  --theme-text: #EEEFEA;
+  --theme-card: rgba(255, 255, 255, 0.05);
+}
+
+.theme-light {
+  --theme-bg: #EEEFEA;
+  --theme-text: #141414;
+  --theme-card: #FFFFFF;
+}
+
 body {
-  background-color: #EEEFEA;
-  color: #141414;
+  background-color: var(--theme-bg);
+  color: var(--theme-text);
   -webkit-font-smoothing: antialiased;
 }
