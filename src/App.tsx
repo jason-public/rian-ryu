@@ -113,7 +113,7 @@ export default function App() {
                    <p className="text-xs opacity-60 mb-6">남양주시 발전을 이끈 최초 프로젝트</p>
                    <div className="inline-flex items-center gap-2 text-xs font-medium px-3 py-2 border border-app-text/20 rounded-full bg-app-text/5 mt-4 group">
                      <span className="w-2 h-2 rounded-full bg-app-text animate-pulse"></span>
-                     <p className="break-keep">자세한 내용을 보시려면 클릭하세요</p>
+                     <p className="break-keep">자세한 내용을 보시려면 아래의 내용을 클릭하세요.</p>
                    </div>
                 </div>
               </FadeUp>
@@ -219,7 +219,7 @@ export default function App() {
                   <h3 className="text-xs font-bold uppercase tracking-widest opacity-50">Media Coverage</h3>
                   <div className="inline-flex items-center gap-2 text-xs font-medium px-3 py-1.5 border border-app-text/20 rounded-full bg-app-text/5 w-max">
                     <span className="w-1.5 h-1.5 rounded-full bg-app-text animate-pulse"></span>
-                    <p className="break-keep opacity-80">자세한 내용을 보시려면 클릭하세요.</p>
+                    <p className="break-keep opacity-80">자세한 내용을 보시려면 아래의 내용을 클릭하세요.</p>
                   </div>
                 </div>
               </FadeUp>
