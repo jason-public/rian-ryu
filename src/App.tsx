@@ -27,7 +27,7 @@ export default function App() {
             <img 
               src="/me.webp" 
               alt="Profile Background" 
-              className="absolute right-0 top-0 w-[90%] md:w-[60%] h-full object-cover object-top opacity-50 grayscale mix-blend-multiply"
+              className="absolute right-0 top-0 w-[90%] md:w-[60%] h-full object-cover object-top opacity-50 grayscale mix-blend-multiply scale-[0.7] origin-top-right"
             />
             
             {/* 2. Gradient Masks for smooth blending */}
@@ -191,16 +191,7 @@ export default function App() {
                    <div key={idx} className="flex gap-6 items-baseline">
                      <div className="text-xs font-mono opacity-50 w-16 shrink-0">{ai.date}</div>
                      <div>
-                       {ai.url ? (
-                         <a href={ai.url} target="_blank" rel="noopener noreferrer" className="group inline-block">
-                           <h4 className="font-bold text-sm md:text-base group-hover:underline underline-offset-4 flex items-center gap-2 decoration-2 decoration-[#141414]/20">
-                             {ai.title}
-                             <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                           </h4>
-                         </a>
-                       ) : (
-                         <h4 className="font-bold text-sm md:text-base">{ai.title}</h4>
-                       )}
+                       <h4 className="font-bold text-sm md:text-base">{ai.title}</h4>
                        <p className="text-sm opacity-70 mt-3 leading-relaxed break-keep font-light">{ai.description}</p>
                      </div>
                    </div>

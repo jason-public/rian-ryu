@@ -15,7 +15,7 @@ export const profile = {
 
 export const highlights = [
   {
-    title: "민간협력 화물주차장 개발",
+    title: "민간 협력 화물주차장 사업 추진",
     badge: "전국 최초",
     description: "남양주시청 자동차관리과 화물팀 업무 총괄 및 민간협력 화물주차장 추진",
     icon: Truck,
@@ -168,14 +168,12 @@ export const aiActivities = [
   {
     date: "2025.02",
     title: "남양주시 '스마트 행정혁신 연구동아리' 회장 역임",
-    description: "AI를 활용한 스마트 행정혁신 사례 발굴 및 개발",
-    url: "/study_group_report.pdf"
+    description: "AI를 활용한 스마트 행정혁신 사례 발굴 및 개발"
   },
   {
     date: "2026.05",
     title: "남양주시 월례조회 직원 및 시민 대상 발표",
-    description: "발표 내용 : AI가 여는 스마트 행정의 새로운 패러다임",
-    url: ""
+    description: "발표 내용 : AI가 여는 스마트 행정의 새로운 패러다임"
   }
 ];
 
