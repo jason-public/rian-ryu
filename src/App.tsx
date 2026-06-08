@@ -79,9 +79,9 @@ export default function App() {
                  initial={{ y: "100%" }}
                  animate={{ y: 0 }}
                  transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                 className="text-[13vw] md:text-[11vw] leading-[0.85] font-bold uppercase tracking-tight"
+                 className="text-[11vw] md:text-[9vw] lg:text-[8vw] leading-[0.85] font-bold uppercase tracking-tight"
                >
-                 Public<br />Admin<span className="text-transparent" style={{ WebkitTextStroke: '2px var(--theme-text)' }}>istrator</span>
+                 PUBLIC<br />ADMIN<span className="text-transparent" style={{ WebkitTextStroke: '2px var(--theme-text)' }}>ISTRATION</span>
                </motion.h1>
              </div>
              <div className="md:col-span-4 pb-2">
